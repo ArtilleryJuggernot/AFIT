@@ -1,0 +1,213 @@
+# dune runtest
+# OCAMLPARAM: unset
+# Workspace root: /home/kali/Desktop/hugo.jacquel
+$ /usr/bin/nproc > /tmp/dune570a0a.output 2> /dev/null
+# Auto-detected concurrency: 2
+# disable binary cache
+$ /home/kali/.opam/4.13.1/bin/ocamlc.opt -config > /tmp/dunecfddd4.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/kali/.opam/4.13.1/lib/toplevel"
+#  ; ocaml_bin = External "/home/kali/.opam/4.13.1/bin"
+#  ; ocaml = Ok External "/home/kali/.opam/4.13.1/bin/ocaml"
+#  ; ocamlc = External "/home/kali/.opam/4.13.1/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/kali/.opam/4.13.1/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/kali/.opam/4.13.1/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/kali/.opam/4.13.1/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/kali/.opam/4.13.1/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/kali/.opam/4.13.1/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/home/kali/Desktop/hugo.jacquel"
+#        ; "INSIDE_DUNE" : "/home/kali/Desktop/hugo.jacquel/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/kali/Desktop/hugo.jacquel/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/kali/Desktop/hugo.jacquel/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/kali/Desktop/hugo.jacquel/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/home/kali/.opam/4.13.1/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.13.1"
+#      ; standard_library_default = "/home/kali/.opam/4.13.1/lib/ocaml"
+#      ; standard_library = "/home/kali/.opam/4.13.1/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X030"
+#      ; cmi_magic_number = "Caml1999I030"
+#      ; cmo_magic_number = "Caml1999O030"
+#      ; cma_magic_number = "Caml1999A030"
+#      ; cmx_magic_number = "Caml1999Y030"
+#      ; cmxa_magic_number = "Caml1999Z030"
+#      ; ast_impl_magic_number = "Caml1999M030"
+#      ; ast_intf_magic_number = "Caml1999N030"
+#      ; cmxs_magic_number = "Caml1999D030"
+#      ; cmt_magic_number = "Caml1999T030"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default/Source/tests/scalable && ./run_tests.exe --color=always)
+> Testing `scalable_basic_arithmetics'.
+> This run has ID `790WDRZR'.
+>
+>   [OK]          scalable_basic_arithmetics          0   GCD on bitarrays func...
+>   [OK]          scalable_basic_arithmetics          1   Bezout on bitarrays f...
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/scalable/_build/_tests/scalable_basic_arithmetics'.
+> Test Successful in 0.000s. 2 tests run.
+> Testing `scalable_power'.
+> This run has ID `AW8Q4EX7'.
+>
+>   [OK]          scalable_power          0   Pow on bitarrays function.
+>   [OK]          scalable_power          1   Power on bitarrays function.
+>   [OK]          scalable_power          2   Modular power on bittarays function.
+>   [OK]          scalable_power          3   Modular power with prime modulo o...
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/scalable/_build/_tests/scalable_power'.
+> Test Successful in 0.000s. 4 tests run.
+> Testing `scalable_test_primes'.
+> This run has ID `IBR0OASH'.
+>
+>   [OK]          scalable_test_primes          0   Is prime on bitarrays funct...
+>   [OK]          scalable_test_primes          1   Is pseudo-prime on bitarray...
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/scalable/_build/_tests/scalable_test_primes'.
+> Test Successful in 0.001s. 2 tests run.
+$ (cd _build/default/Source/tests/builtin && ./run_tests.exe --color=always)
+> Testing `builtin'.
+> This run has ID `CB21MQA1'.
+>
+>   [OK]          builtin          0   Sign function.
+>   [OK]          builtin          1   Quot function.
+>   [OK]          builtin          2   Modulo function.
+>   [OK]          builtin          3   div function.
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/builtin/_build/_tests/builtin'.
+> Test Successful in 0.000s. 4 tests run.
+> Testing `basic_arithmetics'.
+> This run has ID `OQ5ZA0WN'.
+>
+>   [OK]          basic_arithmetics          0   GCD function.
+>   [OK]          basic_arithmetics          1   Bezout function.
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/builtin/_build/_tests/basic_arithmetics'.
+> Test Successful in 0.000s. 2 tests run.
+> Testing `power'.
+> This run has ID `NVQQVYTV'.
+>
+>   [OK]          power          0   Pow function.
+>   [OK]          power          1   Power function.
+>   [OK]          power          2   Modular power function.
+>   [OK]          power          3   Modular power with prime modulo function.
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/builtin/_build/_tests/power'.
+> Test Successful in 0.000s. 4 tests run.
+> Testing `test_primes'.
+> This run has ID `Q8AX7PCL'.
+>
+>   [OK]          test_primes          0   Is prime function.
+>   [OK]          test_primes          1   Is pseudo-prime function.
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/builtin/_build/_tests/test_primes'.
+> Test Successful in 0.000s. 2 tests run.
+> Testing `generate_primes'.
+> This run has ID `0YC1XW8R'.
+>
+>   [OK]          generate_primes          0   Eratosthenes initialisation func...
+>   [OK]          generate_primes          1   Eratosthenes function.
+>   [OK]          generate_primes          2   Double primes function.
+>   [OK]          generate_primes          3   Twin primes function.
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/builtin/_build/_tests/generate_primes'.
+> Test Successful in 0.000s. 4 tests run.
+> Testing `encoding_msg'.
+> This run has ID `LZAM6EN6'.
+>
+>   [OK]          encoding_msg          0   Encode function.
+>   [OK]          encoding_msg          1   Decode function.
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/builtin/_build/_tests/encoding_msg'.
+> Test Successful in 0.000s. 2 tests run.
+> Testing `ciphers'.
+> This run has ID `NAFYU34S'.
+>
+>   [OK]          ciphers          0   Cesar encryption function.
+>   [OK]          ciphers          1   Cesar decryption function.
+>   [OK]          ciphers          2   Generate RSA keys function.
+>   [OK]          ciphers          3   RSA encryption function.
+>   [OK]          ciphers          4   RSA decryption function.
+>   [OK]          ciphers          5   El Gamal cryptosystem functions.
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/builtin/_build/_tests/ciphers'.
+> Test Successful in 6.056s. 6 tests run.
+> Testing `break_ciphers'.
+> This run has ID `OVSX2MX9'.
+>
+>   [OK]          break_ciphers          0   RSA key breaking function.
+>
+> Full test results in `~/Desktop/hugo.jacquel/_build/default/Source/tests/builtin/_build/_tests/break_ciphers'.
+> Test Successful in 0.000s. 1 test run.
